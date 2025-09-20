@@ -7,6 +7,7 @@ const SecondPage = () => {
             <p style={{color: 'red'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempore sunt adipisci distinctio nihil eum et beatae voluptatem dolores praesentium reprehenderit aperiam ut totam aut, optio, voluptatibus vero officia iste.</p>
             
         </div>
+        
     );
 };
 

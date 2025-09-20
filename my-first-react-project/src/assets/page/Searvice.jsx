@@ -4,6 +4,7 @@ import Nav from '../components/Nav';
 const Searvice = () => {
     return (
         <div>
+            <Nav/>
             <h1>This is Services Page</h1>
             
         </div>
