@@ -1,58 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Nav from './assets/components/Nav';
+import ReactDom from 'react-dom/client';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './assets/page/Home';
+import AboutUs from './assets/page/AboutUs';
+import Searvice from './assets/page/Searvice';
 
-import SecondPage from './SecondPage';
-import PageTwo from './PageTwo';
-import Intarnal from './Intarnal';
 
-function App() {
-  const name = "I am Hares Islam";
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <p>This is paragraph text powered by { name }</p>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <div>
-        <SecondPage />
-        
-  
-      </div>
-      <div>
-        <PageTwo   />
-      </div>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/home' element={<Home />} />
+          <Route path='/about' element={<AboutUs />} />
+          <Route path='/services' element={<Searvice />} />
+        </Routes>
+      </BrowserRouter>
       
-      <div>
-        <h1>This is App Component</h1>
-        <Intarnal />
-      </div>
-      
-     
-     
-      
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;
